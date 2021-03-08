@@ -1,6 +1,7 @@
 
 use v6;
 unit module Cuckoo:ver<0.0.1>;
+# vim: ft=perl6 expandtab sw=4
 use NativeCall;
 
 =begin pod
@@ -76,9 +77,3 @@ multi sub utime( Str $f, Instant $atime, Instant $mtime) is export {
                 :atime( Int($atime.to-posix[0].round)),
                 :mtime(Int($mtime.to-posix[0].round)) ));
 }
-
-# class Timeval is repr( 'CStruct') { }
-# class Timespec is repr( 'CStruct') { }
-
-# vim: ft=perl6 expandtab sw=4
-
